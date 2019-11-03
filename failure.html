@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Sorry，嘤嘤嘤</title>
+    <script type="text/javascript">
+        function display() {
+            var now=new Date();
+            var h=now.getHours();
+            var m=now.getMinutes();
+            var s=now.getSeconds();
+            var mark="AM";
+            if (h>12) {
+                mark="PM";
+                h-=12;
+            }
+            if (h==0) h=12;
+            if (h<10) h="0"+h;
+            if (m<10) m="0"+m;
+            if (s<10) s="0"+s;
+            digit_clock.innerText=h+":"+m+":"+s+" "+mark;
+            setTimeout("display()",100);
+        }
+        window.onload=function() {display(); }
+    </script>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="container clearf">
+            <div class="left">
+                <a href="index.html"><button>首页</button></a>
+                <a href="#" onclick="javascript:history.back(-1);"><button>后退</button></a>
+                <a href="#" onclick="javascript:history.go(1);"><button>前进</button></a> 
+                <div id="digit_clock" style="font-size: 20px; color: #800080 font-weight:bold;">
+                clock
+                </div>
+            </div>
+            <div class="right">
+                <a href="failure.html" class="item">我的订单</a>
+                <a href="failure.html" class="item">收藏夹</a>
+                <select onchange="window.location=this.value;">
+                    <option value="failure.html">登录</option>
+                    <option value="register.html">注册</option>
+                </select>
+            </div>
+        </div>
+    </div>
+	<p>很抱歉，该模块尚未开发</p>
+	<input type="button" onclick="fun()" value="返回主页">
+    
+    <div style="margin-top: 400px" class="footer">
+        <div class="container clearf">
+        <a href="failure.html" class="item">交易安全</a>
+        <a href="failure.html" class="item">退款流程</a>
+        <a href="failure.html" class="item">消费警示</a>
+        <a href="failure.html" class="item">24小时在线帮助</a>
+        <div class=""><pre>Github：acmerszl    邮箱：acmerszl@163.com</pre></div>
+        <div class="">地址：河南省郑州市金水区华北水利水电大学新校区22109宿舍</div>
+        </div>
+    </div>
+</body>
+</html>

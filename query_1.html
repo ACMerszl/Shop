@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>小蓝书</title>
+    <script type="text/javascript">
+        window.onload=function() {
+            var demo=document.getElementById("demo");
+            var count=5; 
+            setTimeout(fn,1000);
+            function fn() {
+                count--;
+                demo.innerHTML="感谢您的填写，联系客服领取奖品，"+count+"秒之后将自动跳转首页";
+                if(count<=0){
+                    window.location.href="index.html";
+                }else{
+                    setTimeout(fn,1000);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="container clearf">
+            <div class="left">
+                <a href="index.html"><button>首页</button></a>
+                <a href="#" onclick="javascript:history.back(-1);"><button>后退</button></a>
+                <a href="#" onclick="javascript:history.go(1);"><button>前进</button></a> 
+            </div>
+            <div class="right">
+                <a href="failure.html" class="item">我的订单</a>
+                <a href="failure.html" class="item">收藏夹</a>
+                <select onchange="window.location=this.value;">
+                    <option value="failure.html">登录</option>
+                    <option value="register.html">注册</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="demo" style="text-align: center; line-height: 600px; font-size: 30px"></div>
+
+</body>
+</html>

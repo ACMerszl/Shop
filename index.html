@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="all">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>小蓝书</title>
+    <script type="text/javascript">
+        function display() {
+            var now=new Date();
+            var h=now.getHours();
+            var m=now.getMinutes();
+            var s=now.getSeconds();
+            var mark="AM";
+            if (h>12) {
+                mark="PM";
+                h-=12;
+            }
+            if (h==0) h=12;
+            if (h<10) h="0"+h;
+            if (m<10) m="0"+m;
+            if (s<10) s="0"+s;
+            digit_clock.innerText=h+":"+m+":"+s+" "+mark;
+            setTimeout("display()",100);
+        }
+        window.onload=function() {display(); }
+    </script>
+</head>
+<body class="all">
+    <div class="top-nav">
+        <div class="container clearf">
+            <div class="left">
+                <a href="index.html"><button>首页</button></a>
+                <a href="#" onclick="javascript:history.back(-1);"><button>后退</button></a>
+                <a href="#" onclick="javascript:history.go(1);"><button>前进</button></a> 
+                <div id="digit_clock" style="font-size: 20px; color: #800080 font-weight:bold;">
+                clock
+                </div>
+            </div>
+            <div class="right">
+                <a href="failure.html" class="item">我的订单</a>
+                <a href="failure.html" class="item">收藏夹</a>
+               	<select onchange="window.location=this.value;">
+                    <option value="failure.html">登录</option>
+                    <option value="register.html">注册</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container clearf">
+            <div class="w-2 logo">小蓝书</div>
+            <div class="w-5 search-bar">
+                <input type="text">
+                <button onclick="goFailure()">搜索</button>
+            </div>
+            <div class="w-3 cart">
+                <a href="failure.html" class="item">我的购物车</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-promote">
+        <div class="container clearf">
+            <div class="w-2 cat h_1">
+                <div class="item"><a href="https://www.taobao.com/markets/nvzhuang/taobaonvzhuang?spm=a21bo.2017.201867-main.1.5c2e11d9eSEQyJ">女装</a> / <a  href="https://www.taobao.com/markets/nanzhuang/2017new?spm=a21bo.2017.201867-main.2.5c2e11d9eSEQyJ">男装</a></div>
+
+                <div class="item"><a href="https://www.taobao.com/markets/xie/nvxie/index?spm=a21bo.2017.201867-main.4.5c2e11d9eSEQyJ">鞋靴</a> / <a href="https://www.taobao.com/markets/bao/xiangbao?spm=a21bo.2017.201867-main.5.5c2e11d9eSEQyJ">箱包</a>
+                </div>
+
+                <div class="item"><a href="https://www.taobao.com/markets/qbb/index?spm=a21bo.2017.201867-main.8.5c2e11d9eSEQyJ&pvid=b9f2df4c-6d60-4af4-b500-c5168009831f&scm=1007.12802.34660.100200300000000">孕产</a> / <a href="https://www.taobao.com/markets/qbb/index?spm=a21bo.2017.201867-main.9.5c2e11d9eSEQyJ&pvid=b9f2df4c-6d60-4af4-b500-c5168009831f&scm=1007.12802.34660.100200300000000">用品</a></div>
+
+                <div class="item"><a href="https://mei.taobao.com/?spm=a21bo.2017.201867-main.13.5c2e11d9eSEQyJ">美妆</a> / <a href="https://www.taobao.com/market/baihuo/xihuyongpin.php?spm=a21bo.2017.201867-main.14.5c2e11d9eSEQyJ">洗护</a></div>
+
+                <div class="item"><a href="https://www.taobao.com/markets/3c/tbdc?spm=a21bo.2017.201867-main.10.5c2e11d9eSEQyJ">家电</a> / <a href="https://www.taobao.com/markets/3c/tbdc?spm=a21bo.2017.201867-main.11.5c2e11d9eSEQyJ">数码</a></div>
+
+                <div class="item"><a href="https://www.taobao.com/market/peishi/zhubao.php?spm=a21bo.2017.201867-main.16.5c2e11d9eSEQyJ">珠宝</a> / <a href="https://www.taobao.com/market/peishi/shoubiao.php?spm=a21bo.2017.201867-main.18.5c2e11d9eSEQyJ">手表</a></div>
+
+                <div class="item"><a href="https://www.taobao.com/markets/coolcity/coolcityHome?spm=a21bo.2017.201867-main.19.5c2e11d9eSEQyJ">运动</a> / <a href="https://www.taobao.com/markets/coolcity/coolcityHome?spm=a21bo.2017.201867-main.20.5c2e11d9eSEQyJ">户外</a></div>
+
+                <div class="item"><a href="https://s.taobao.com/search?spm=a21bo.2017.201867-main.28.5c2e11d9eSEQyJ&q=%E5%9B%AD%E8%89%BA&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&ie=utf8&initiative_id=tbindexz_20170419">鲜花</a> / <a href="https://s.taobao.com/search?spm=a21bo.2017.201867-main.29.5c2e11d9eSEQyJ&ie=utf8&initiative_id=staobaoz_20170419&stats_click=search_radio_all%3A1&js=1&imgfile=&q=%E8%BF%9B%E5%8F%A3%E7%8B%97%E7%B2%AE&suggest=history_3&_input_charset=utf-8&wq=&suggest_query=&source=suggest">宠物</a></div>
+
+                <div class="item"><a href="https://wujin.taobao.com/?spm=a21bo.2017.201867-main.31.5c2e11d9eSEQyJ">工具</a> / <a href="https://www.taobao.com/markets/bangong/pchome?spm=a21bo.2017.201867-main.40.73b811d9fydD1n&wh_ttid=pc">办公</a></div>
+
+            </div>
+            <div class="w-6 h_1" >
+                <div class="col_r h_2 shop_1">
+                    购
+                </div>
+                <div class="cat-promote" >
+                    <div class="w-5 col_y h_3 shop_2" >
+                     物   
+                    </div>
+                    <div class="w-5 col_b h_3 shop_2">
+                      吧  
+                    </div>
+                </div>
+            </div>
+            <div class="w-2 info h_1">
+                <div class="auth clearf">
+                    <div class="avatar">
+                        <img src="img_1.png">
+                    </div>
+                    您好，欢迎剁手!
+                </div>
+                <div class="anno">
+                    <div class="title">公告</div>
+                    <div class="content">
+                     <pre>
+欢迎来到小蓝书~
+一分钱买不了吃亏，
+一分钱买不了上当。
+使用本网站后，
+猫猫狗狗都卸载。
+
+
+不过由于本网站正处于测试阶段，
+所以目前只提供首页、前进、
+后退、登录、注册模块以及部分
+商品的展示模块。
+                    </pre>
+                    <a style="color: #888;" href="query.html">
+                    感恩回馈：
+                    填写问卷即送精美礼品一份！
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container clearf">
+        <div class="cat-promote">
+            <div class="title">男装</div>
+            <div class="content">
+                <div class="w-2 item">
+                    <div class="cardb">
+                        <a href="https://cjqco.taobao.com/?spm=a217m.8316598.1041398.14.452133d57eJVsY"><img src="img_b01.jpg" > </a>
+                    </div>
+                </div>
+                <div class="w-3 item">
+                    <div class="cardb">
+                        <a href="https://showhands.taobao.com/?spm=a217m.8316598.1041398.15.452133d57eJVsY"><img src="img_b02.jpg"></a>
+                    </div>
+                </div>
+                <div class="w-2 item">
+                    <div class="cardb">
+                        <a href="https://shop368005795.taobao.com/?spm=a217m.8316598.1041398.17.452133d57eJVsY"><img src="img_b03.jpg"></a>
+                    </div>
+                </div>
+                <div class="w-3 item">
+                    <div class="cardb">
+                        <a href="https://shop186148739.taobao.com/?spm=a217m.8316598.1041398.18.452133d57eJVsY"><img src="img_b04.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cat-promote">
+            <div class="title">女装</div>
+            <div class="content">
+                <div class="w-3 item">
+                    <div class="cardg">
+                        <a href="https://huodong.taobao.com/wow/a/act/tao/tmc/24072/wupr?spm=a217f.8051907.312003.1.50403308YCUnmq&pos=1&wh_pid=industry-170758&acm=20140506002.1003.8.6854966&scm=1003.8.20140506002.OTHER_1573679814888_6854966"><img src="img_g01.jpg"></a>
+                    </div>
+                </div>
+                <div class="w-2 item">
+                    <div class="cardg">
+                        <a href="https://item.taobao.com/item.htm?spm=a217f.8051907.312171.47.50403308YCUnmq&id=601982914776"><img src="img_g02.jpg"></a>
+                    </div>
+                </div>
+                <div class="w-3 item">
+                    <div class="cardg">
+                        <a href="https://item.taobao.com/item.htm?spm=a217f.8051907.312171.63.50403308YCUnmq&id=598283183271"><img src="img_g03.jpg"></a>
+                    </div>
+                </div>
+                <div class="w-2 item">
+                    <div class="cardg">
+                        <a href="https://item.taobao.com/item.htm?spm=a217f.8051907.312171.49.50403308YCUnmq&id=604138870288"><img src="img_g04.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container clearf">
+        <a href="failure.html" class="item">交易安全</a>
+        <a href="failure.html" class="item">退款流程</a>
+        <a href="failure.html" class="item">消费警示</a>
+        <a href="failure.html" class="item">24小时在线帮助</a>
+        <div class=""><pre>Github：acmerszl    邮箱：acmerszl@163.com</pre></div>
+        <div class="">地址：河南省郑州市金水区华北水利水电大学新校区22109宿舍</div>
+        </div>
+    </div>
+
+</body>
+</html>
