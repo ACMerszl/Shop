@@ -1,90 +1,18 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <title>小蓝书</title>
-    <script type="text/javascript">
-        function display() {
-            var now=new Date();
-            var h=now.getHours();
-            var m=now.getMinutes();
-            var s=now.getSeconds();
-            var mark="AM";
-            if (h>12) {
-                mark="PM";
-                h-=12;
-            }
-            if (h==0) h=12;
-            if (h<10) h="0"+h;
-            if (m<10) m="0"+m;
-            if (s<10) s="0"+s;
-            digit_clock.innerText=h+":"+m+":"+s+" "+mark;
-            setTimeout("display()",100);
-        }
-        window.onload=function() {display(); }
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
 
-        function show() {
-            window.location.href="query_1.html";
-        }
-    </script>
-    <script>
-        function doNothing(){ 
-            window.event.returnValue=false; 
-            return false; 
-    } 
-</script>
-</head>
-<body oncontextmenu="doNothing()">
-    <div class="top-nav">
-        <div class="container clearf">
-            <div class="left">
-                <a href="index.html"><button>首页</button></a>
-                <a href="#" onclick="javascript:history.back(-1);"><button>后退</button></a>
-                <a href="#" onclick="javascript:history.go(1);"><button>前进</button></a> 
-                <div id="digit_clock" style="font-size: 20px; color: #800080 font-weight:bold;">
-                clock
-                </div>
-            </div>
-            <div class="right">
-                <a href="failure.html" class="item">我的订单</a>
-                <a href="failure.html" class="item">收藏夹</a>
-                <select onchange="window.location=this.value;">
-                    <option value="failure.html">登录</option>
-                    <option value="register.html">注册</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="test1">
-        <ol style="margin: auto">
-            <li>您认为小蓝书的UI设计怎么样？</li>
-            <textarea name="t_1" cols="80" rows="5" style="vertical-align:top;outline:none;"></textarea>
-            <hr align="left">
-            <li>您是怎么知道小蓝书的？</li>
-             <textarea name="t_2" cols="80" rows="5" style="vertical-align:top;outline:none;"></textarea>
-            <hr align="left">
-            <li>您认为小蓝书和其他购物网站的区别在哪里？</li>
-             <textarea name="t_3" cols="80" rows="5" style="vertical-align:top;outline:none;"></textarea>
-            <hr align="left">
-            <li>您为什么选择小蓝书？</li>
-             <textarea name="t_4" cols="80" rows="5" style="vertical-align:top;outline:none;"></textarea>
-            <hr align="left">
-        </ol>
-    </div>
-    <br>
-    <div style="text-align: center; width: 120px">
-        <button onclick="show()">提交</button>
-    </div>
-    <div style="margin-top: 200px" class="footer">
-        <div class="container clearf">
-        <a href="failure.html" class="item">交易安全</a>
-        <a href="failure.html" class="item">退款流程</a>
-        <a href="failure.html" class="item">消费警示</a>
-        <a href="failure.html" class="item">24小时在线帮助</a>
-        <div class=""><pre>Github：acmerszl    邮箱：acmerszl@163.com</pre></div>
-        <div class="">地址：河南省郑州市金水区华北水利水电大学新校区22109宿舍</div>
-        </div>
-    </div>
-</body>
-</html>
+var Words ="%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22zh-CN%22%3E%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22main.css%22%3E%0A%20%20%20%20%3Ctitle%3E%u5C0F%u84DD%u4E66%3C/title%3E%0A%20%20%20%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20%20%20%20%20%20%20%20function%20display%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20now%3Dnew%20Date%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20h%3Dnow.getHours%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20m%3Dnow.getMinutes%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20s%3Dnow.getSeconds%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20mark%3D%22AM%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28h%3E12%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mark%3D%22PM%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20h-%3D12%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28h%3D%3D0%29%20h%3D12%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28h%3C10%29%20h%3D%220%22+h%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28m%3C10%29%20m%3D%220%22+m%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28s%3C10%29%20s%3D%220%22+s%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20digit_clock.innerText%3Dh+%22%3A%22+m+%22%3A%22+s+%22%20%22+mark%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28%22display%28%29%22%2C100%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20window.onload%3Dfunction%28%29%20%7Bdisplay%28%29%3B%20%7D%0A%0A%20%20%20%20%20%20%20%20function%20show%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20window.location.href%3D%22query_1.html%22%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/script%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20function%20doNothing%28%29%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20window.event.returnValue%3Dfalse%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%20%0A%20%20%20%20%7D%20%0A%3C/script%3E%0A%3C/head%3E%0A%3Cbody%20oncontextmenu%3D%22doNothing%28%29%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22top-nav%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22container%20clearf%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22index.html%22%3E%3Cbutton%3E%u9996%u9875%3C/button%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%20onclick%3D%22javascript%3Ahistory.back%28-1%29%3B%22%3E%3Cbutton%3E%u540E%u9000%3C/button%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%20onclick%3D%22javascript%3Ahistory.go%281%29%3B%22%3E%3Cbutton%3E%u524D%u8FDB%3C/button%3E%3C/a%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22digit_clock%22%20style%3D%22font-size%3A%2020px%3B%20color%3A%20%23800080%20font-weight%3Abold%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20clock%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22right%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u6211%u7684%u8BA2%u5355%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u6536%u85CF%u5939%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cselect%20onchange%3D%22window.location%3Dthis.value%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22failure.html%22%3E%u767B%u5F55%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22register.html%22%3E%u6CE8%u518C%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/select%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22test1%22%3E%0A%20%20%20%20%20%20%20%20%3Col%20style%3D%22margin%3A%20auto%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%u60A8%u8BA4%u4E3A%u5C0F%u84DD%u4E66%u7684UI%u8BBE%u8BA1%u600E%u4E48%u6837%uFF1F%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20name%3D%22t_1%22%20cols%3D%2280%22%20rows%3D%225%22%20style%3D%22vertical-align%3Atop%3Boutline%3Anone%3B%22%3E%3C/textarea%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Chr%20align%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%u60A8%u662F%u600E%u4E48%u77E5%u9053%u5C0F%u84DD%u4E66%u7684%uFF1F%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20name%3D%22t_2%22%20cols%3D%2280%22%20rows%3D%225%22%20style%3D%22vertical-align%3Atop%3Boutline%3Anone%3B%22%3E%3C/textarea%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Chr%20align%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%u60A8%u8BA4%u4E3A%u5C0F%u84DD%u4E66%u548C%u5176%u4ED6%u8D2D%u7269%u7F51%u7AD9%u7684%u533A%u522B%u5728%u54EA%u91CC%uFF1F%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20name%3D%22t_3%22%20cols%3D%2280%22%20rows%3D%225%22%20style%3D%22vertical-align%3Atop%3Boutline%3Anone%3B%22%3E%3C/textarea%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Chr%20align%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%u60A8%u4E3A%u4EC0%u4E48%u9009%u62E9%u5C0F%u84DD%u4E66%uFF1F%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20name%3D%22t_4%22%20cols%3D%2280%22%20rows%3D%225%22%20style%3D%22vertical-align%3Atop%3Boutline%3Anone%3B%22%3E%3C/textarea%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Chr%20align%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%3C/ol%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cbr%3E%0A%20%20%20%20%3Cdiv%20style%3D%22text-align%3A%20center%3B%20width%3A%20120px%22%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20onclick%3D%22show%28%29%22%3E%u63D0%u4EA4%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20style%3D%22margin-top%3A%20200px%22%20class%3D%22footer%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22container%20clearf%22%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u4EA4%u6613%u5B89%u5168%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u9000%u6B3E%u6D41%u7A0B%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u6D88%u8D39%u8B66%u793A%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E24%u5C0F%u65F6%u5728%u7EBF%u5E2E%u52A9%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22%22%3E%3Cpre%3EGithub%uFF1Aacmerszl%20%20%20%20%u90AE%u7BB1%uFF1Aacmerszl@163.com%3C/pre%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22%22%3E%u5730%u5740%uFF1A%u6CB3%u5357%u7701%u90D1%u5DDE%u5E02%u91D1%u6C34%u533A%u534E%u5317%u6C34%u5229%u6C34%u7535%u5927%u5B66%u65B0%u6821%u533A22109%u5BBF%u820D%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%3C/body%3E%0A%3C/html%3E%0A"
+function OutWord()
+{
+var NewWords;
+NewWords = unescape(Words);
+document.write(NewWords);
+} 
+OutWord();
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>
