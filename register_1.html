@@ -32,8 +32,14 @@
             }
         }
     </script>
+    <script>
+        function doNothing(){ 
+            window.event.returnValue=false; 
+            return false; 
+    } 
+</script>
 </head>
-<body>
+<body oncontextmenu="doNothing()">
     <div class="top-nav">
         <div class="container clearf">
             <div class="left">
