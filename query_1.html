@@ -1,51 +1,18 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <title>小蓝书</title>
-    <script type="text/javascript">
-        window.onload=function() {
-            var demo=document.getElementById("demo");
-            var count=5; 
-            setTimeout(fn,1000);
-            function fn() {
-                count--;
-                demo.innerHTML="感谢您的填写，联系客服领取奖品，"+count+"秒之后将自动跳转首页";
-                if(count<=0){
-                    window.location.href="index.html";
-                }else{
-                    setTimeout(fn,1000);
-                }
-            }
-        }
-    </script>
-    <script>
-        function doNothing(){ 
-            window.event.returnValue=false; 
-            return false; 
-    } 
-</script>
-</head>
-<body oncontextmenu="doNothing()">
-    <div class="top-nav">
-        <div class="container clearf">
-            <div class="left">
-                <a href="index.html"><button>首页</button></a>
-                <a href="#" onclick="javascript:history.back(-1);"><button>后退</button></a>
-                <a href="#" onclick="javascript:history.go(1);"><button>前进</button></a> 
-            </div>
-            <div class="right">
-                <a href="failure.html" class="item">我的订单</a>
-                <a href="failure.html" class="item">收藏夹</a>
-                <select onchange="window.location=this.value;">
-                    <option value="failure.html">登录</option>
-                    <option value="register.html">注册</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div id="demo" style="text-align: center; line-height: 600px; font-size: 30px"></div>
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
 
-</body>
-</html>
+var Words ="%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22zh-CN%22%3E%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22main.css%22%3E%0A%20%20%20%20%3Ctitle%3E%u5C0F%u84DD%u4E66%3C/title%3E%0A%20%20%20%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20%20%20%20%20%20%20%20window.onload%3Dfunction%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20demo%3Ddocument.getElementById%28%22demo%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20count%3D5%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28fn%2C1000%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20function%20fn%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20count--%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20demo.innerHTML%3D%22%u611F%u8C22%u60A8%u7684%u586B%u5199%uFF0C%u8054%u7CFB%u5BA2%u670D%u9886%u53D6%u5956%u54C1%uFF0C%22+count+%22%u79D2%u4E4B%u540E%u5C06%u81EA%u52A8%u8DF3%u8F6C%u9996%u9875%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%28count%3C%3D0%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.location.href%3D%22index.html%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Delse%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28fn%2C1000%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/script%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20function%20doNothing%28%29%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20window.event.returnValue%3Dfalse%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%20%0A%20%20%20%20%7D%20%0A%3C/script%3E%0A%3C/head%3E%0A%3Cbody%20%3E%0A%20%20%20%20%3Cdiv%20class%3D%22top-nav%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22container%20clearf%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22index.html%22%3E%3Cbutton%3E%u9996%u9875%3C/button%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%20onclick%3D%22javascript%3Ahistory.back%28-1%29%3B%22%3E%3Cbutton%3E%u540E%u9000%3C/button%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%20onclick%3D%22javascript%3Ahistory.go%281%29%3B%22%3E%3Cbutton%3E%u524D%u8FDB%3C/button%3E%3C/a%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22right%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u6211%u7684%u8BA2%u5355%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22failure.html%22%20class%3D%22item%22%3E%u6536%u85CF%u5939%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cselect%20onchange%3D%22window.location%3Dthis.value%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22failure.html%22%3E%u767B%u5F55%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22register.html%22%3E%u6CE8%u518C%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/select%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20id%3D%22demo%22%20style%3D%22text-align%3A%20center%3B%20line-height%3A%20600px%3B%20font-size%3A%2030px%22%3E%3C/div%3E%0A%0A%3C/body%3E%0A%3C/html%3E%0A"
+function OutWord()
+{
+var NewWords;
+NewWords = unescape(Words);
+document.write(NewWords);
+} 
+OutWord();
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>
